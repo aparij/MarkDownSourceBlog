@@ -6,7 +6,7 @@ Slug: numpy-array-string-search
 Author: Alex Parij
 Summary: Short version for index and feeds
 
-Working on Kaggle’s Titanic competition I needed to test each Numpy array cell if the string contained the second string and return another indexed array with True/False.
+Working on Kaggle’s Titanic competition I needed to test each Numpy array cell if the string  s1 contained the second string and return another indexed array with True/False.
 
 so if I have
 
