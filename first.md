@@ -10,16 +10,17 @@ Working on Kaggle’s Titanic competition I needed to test each Numpy array cell
 
 so if I have
 
-``` python
-nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
+  In [2]: import numpy as np
+  
+  In [3]: nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
+  
+  In [4]: nparr
+  Out[4]: 
+  array([['aaMRac', 'bbbb'],
+         ['ccc', 'ffff'],
+         ['eeee', 'gggggg']], 
+        dtype='|S6')
 
-[['aaMRac','bbbb'],
-
-['ccc','ffff'],
-
-['eeee','gggggg']]
-
-```
 and I’m looking for strings that contain ‘MR’ substring
 
 I want to get
