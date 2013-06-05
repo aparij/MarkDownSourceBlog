@@ -39,12 +39,12 @@ To get the indexed answer I do
     In [6]: np.array(['MR' in s for s in nparr.flat]).reshape(nparr.shape)
     Out[6]: 
     array([[ True, False],
-   	  [False, False],
-      	  [False, False]], dtype=bool)
+   	   [False, False],
+      	   [False, False]], dtype=bool)
 
-which flattens an array before looking for the substring using list comprehension and then creates the new indexed answer with the right shape.
+which flattens the array before looking for the substring using a list comprehension. It then creates the new indexed answer with the right array dimensions.
  
-If you want to go select only one column  you can do like this:
+If you want to select only one column, you do like this:
 
     In [8]: np.array(['MR' in s for s in nparr[0:,1].flat])
     Out[8]: array([False, False, False], dtype=bool)
