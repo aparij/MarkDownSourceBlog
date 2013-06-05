@@ -20,7 +20,7 @@ Let's define an arrya:
            ['eeee', 'gggggg']], 
           dtype='|S6')
 
-and I’m looking for strings that contain ‘MR’.I should get :
+and I’m looking for strings that contain ‘MR’. I should get :
 
     [True, False],
     [False, False],
