@@ -32,15 +32,13 @@ Trying :
     In [5]: 'MR' in nparr
     Out[5]: False
 
-
-
 Gives me False because it tests for a string to string equality and returns the answer for the entire array.
 
 To get the indexed answer I do
 
-   In [6]: np.array(['MR' in s for s in nparr.flat]).reshape(nparr.shape)
-   Out[6]: 
-   array([[ True, False],
+    In [6]: np.array(['MR' in s for s in nparr.flat]).reshape(nparr.shape)
+    Out[6]: 
+    array([[ True, False],
    	  [False, False],
       	  [False, False]], dtype=bool)
 
@@ -48,6 +46,6 @@ which flattens an array before looking for the substring using list comprehensio
  
 If you want to go select only one column  you can do like this:
 
-   In [8]: np.array(['MR' in s for s in nparr[0:,1].flat])
-   Out[8]: array([False, False, False], dtype=bool)
+    In [8]: np.array(['MR' in s for s in nparr[0:,1].flat])
+    Out[8]: array([False, False, False], dtype=bool)
 
