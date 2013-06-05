@@ -6,9 +6,8 @@ Slug: numpy-array-string-search
 Author: Alex Parij
 Summary: Short version for index and feeds
 
-Working on Kaggle’s Titanic competition I needed to test each Numpy array cell if the string  s1 contained the second string and return another indexed array with True/False.
-
-so if I will have
+Working on Kaggle’s Titanic competition I needed to test each Numpy array cell if the string s1 contains the second string s2 and return an indexed array with True/False values.
+Let's define an arrya:
 
     In [2]: import numpy as np
     
@@ -21,32 +20,34 @@ so if I will have
            ['eeee', 'gggggg']], 
           dtype='|S6')
 
-and I’m looking for strings that contain ‘MR’ substring
+and I’m looking for strings that contain ‘MR’.I should get :
 
-I want to get
+    [True, False],
+    [False, False],
+    [False, False]
 
-[[ True, False],
-[False, False],
-[False, False]]
+because ‘aaMRac’ is the only cell that one contains ‘MR’.
+Trying :
 
-because ‘aaMRac’  is the only that contains ‘MR’.
+    In [5]: 'MR' in nparr
+    Out[5]: False
 
-‘MR’ in nparr
 
-will give me False because it will test for string to string equality and return the answer for entire array.
 
-To get the indexed answer
+Gives me False because it tests for a string to string equality and returns the answer for the entire array.
 
-np.array(['MR' in s for s in nparr.flat]).reshape(nparr.shape)
+To get the indexed answer I do
 
-which flattens and before looking for substring and then creates the new indexed answer with the right shape.
+   In [6]: np.array(['MR' in s for s in nparr.flat]).reshape(nparr.shape)
+   Out[6]: 
+   array([[ True, False],
+   	  [False, False],
+      	  [False, False]], dtype=bool)
 
-array([[ True, False],
-[False, False],
-[False, False]], dtype=bool)
-
+which flattens an array before looking for the substring using list comprehension and then creates the new indexed answer with the right shape.
  
+If you want to go select only one column  you can do like this:
 
-if you want to go select only one column  you can do like this
+   In [8]: np.array(['MR' in s for s in nparr[0:,1].flat])
+   Out[8]: array([False, False, False], dtype=bool)
 
-np.array(['MR' in s for s in a[0:,1].flat])
