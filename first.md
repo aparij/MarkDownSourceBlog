@@ -8,18 +8,18 @@ Summary: Short version for index and feeds
 
 Working on Kaggle’s Titanic competition I needed to test each Numpy array cell if the string  s1 contained the second string and return another indexed array with True/False.
 
-so if I have
+so if I will have
 
-  In [2]: import numpy as np
-  
-  In [3]: nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
-  
-  In [4]: nparr
-  Out[4]: 
-  array([['aaMRac', 'bbbb'],
-         ['ccc', 'ffff'],
-         ['eeee', 'gggggg']], 
-        dtype='|S6')
+    In [2]: import numpy as np
+    
+    In [3]: nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
+    
+    In [4]: nparr
+    Out[4]: 
+    array([['aaMRac', 'bbbb'],
+           ['ccc', 'ffff'],
+           ['eeee', 'gggggg']], 
+          dtype='|S6')
 
 and I’m looking for strings that contain ‘MR’ substring
 
