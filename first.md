@@ -10,6 +10,7 @@ Working on Kaggle’s Titanic competition I needed to test each Numpy array cell
 
 so if I have
 
+``` python
 nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
 
 [['aaMRac','bbbb'],
@@ -17,6 +18,8 @@ nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
 ['ccc','ffff'],
 
 ['eeee','gggggg']]
+
+```
 and I’m looking for strings that contain ‘MR’ substring
 
 I want to get
