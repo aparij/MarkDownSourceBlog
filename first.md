@@ -11,14 +11,14 @@ Let's define an arrya:
 
     In [2]: import numpy as np
     
-    In [3]: nparr = np.array([['aaMRac','bbbb'],['ccc','ffff'],['eeee','gggggg']])
+    In [3]: nparr = np.array([["aaMRac","bbbb"],["ccc","ffff"],["eeee","gggggg"]]
     
     In [4]: nparr
     Out[4]: 
-    array([['aaMRac', 'bbbb'],
-           ['ccc', 'ffff'],
-           ['eeee', 'gggggg']], 
-          dtype='|S6')
+    array([["aaMRac", "bbbb"],
+           ["ccc", "ffff"],
+           ["eeee", "gggggg"]], 
+          dtype="|S6")
 
 and I’m looking for strings that contain ‘MR’. I should get :
 
@@ -29,14 +29,14 @@ and I’m looking for strings that contain ‘MR’. I should get :
 because ‘aaMRac’ is the only cell that one contains ‘MR’.
 Trying :
 
-    In [5]: 'MR' in nparr
+    In [5]: "MR" in nparr
     Out[5]: False
 
 Gives me False because it tests for a string to string equality and returns the answer for the entire array.
 
 To get the indexed answer I do
 
-    In [6]: np.array(['MR' in s for s in nparr.flat]).reshape(nparr.shape)
+    In [6]: np.array(["MR" in s for s in nparr.flat]).reshape(nparr.shape)
     Out[6]: 
     array([[ True, False],
    	   [False, False],
@@ -46,6 +46,6 @@ which flattens the array before looking for the substring using a list comprehen
  
 If you want to select only one column, you do like this:
 
-    In [8]: np.array(['MR' in s for s in nparr[0:,1].flat])
+    In [8]: np.array(["MR" in s for s in nparr[0:,1].flat])
     Out[8]: array([False, False, False], dtype=bool)
 
