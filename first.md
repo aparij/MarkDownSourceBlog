@@ -1,4 +1,4 @@
-Title: Numpy substring indexing
+Title: Numpy substring search indexed result
 Date: 2013-05-29 10:20
 Category: Python
 Tags: python, numpy
@@ -7,7 +7,7 @@ Author: Alex Parij
 Summary: Short version for index and feeds
 
 Working on Kaggle’s Titanic competition I needed to test each Numpy array cell if the string s1 contains the second string s2 and return an indexed array with True/False values.
-Let's define an arrya:
+Let's define an array:
 
     In [2]: import numpy as np
     
